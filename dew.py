@@ -132,7 +132,7 @@ async def start(client, message):
             ],
             [
                 InlineKeyboardButton("📢 CHANNEL", url=f"https://t.me/TheGhostOrg"),
-                InlineKeyboardButton("SOURCE 📦", url=f"https://github.com/Leoksu/Dewdrop"),
+                InlineKeyboardButton("SOURCE 📦", url=f"https://github.com/Leoksu/DewChatGPT"),
             ],
             [
                 InlineKeyboardButton("🤖 ABOUT", callback_data="about"),
@@ -200,7 +200,7 @@ async def cb_handler(client: ghoul, query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton("📢 CHANNEL", url=f"https://t.me/TheGhostOrg"),
-                InlineKeyboardButton("SOURCE 📦", url=f"https://github.com/Leoksu/Dewdrop"),
+                InlineKeyboardButton("SOURCE 📦", url=f"https://github.com/Leoksu/DewChatGPT"),
             ],
             [
                 InlineKeyboardButton("🤖 ABOUT", callback_data="about"),
