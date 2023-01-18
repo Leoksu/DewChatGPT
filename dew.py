@@ -1,13 +1,11 @@
-from logging import INFO, WARNING, FileHandler, StreamHandler, basicConfig, getLogger
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, Message
+from logging import INFO, WARNING, FileHandler, StreamHandler, basicConfig, getLogger
 from stuff.string import START_TEXT, HELP_TEXT, ABOUT_TEXT, MENU_TEXT
 from pyrogram.errors import MessageNotModified
 from pyrogram import idle, Client, filters
-from asyncio import sleep
-from pathlib import Path
 from stuff.configs import *
+from asyncio import sleep
 import requests
-import asyncio
 import random
 import glob
 import sys
@@ -17,7 +15,6 @@ import re
 logger = getLogger("DewLogs")
 
 dewlog = f"dews{sys.argv[6]}.log" if len(sys.argv) > 6 else "dews.log"
-logger = getLogger("DewLogs")
 if os.path.exists(dewlog):
     os.remove(dewlog)
 
@@ -97,8 +94,7 @@ async def chat(_, message):
         "Hey! I'm here ready to help you. What can I do for you?",
         "^&;/√%+[\(-$... Ahh Forget it, There's something for me to do? ",
     ]
-    random.shuffle(dewresponses)
-    dewcall = responses[0]
+    dewcall = random.choice(dewresponses)
     if message.reply_to_message:
         if not message.reply_to_message.from_user:
             return
@@ -307,8 +303,8 @@ async def get_uptime(_, message: Message):
     current_time = datetime.utcnow()
     uptime_sec = (current_time - START_TIME).total_seconds()
     uptime = _human_time_duration(int(uptime_sec))
-    await message.reply_text(f"Uptime: `{uptime}`\n"
-                             f"Start time: `{START_TIME_ISO}`",
+    await message.reply_text(f"**Uptime**: `{uptime}`\n"
+                             f"**Start time**: `{START_TIME_ISO}`",
                              quote=True)
 
 logger.info("Successfully loaded ping modules")
