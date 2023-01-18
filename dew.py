@@ -12,6 +12,7 @@ import random
 import glob
 import sys
 import os
+import re
 
 logger = getLogger("DewLogs")
 
