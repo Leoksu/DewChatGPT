@@ -1,4 +1,4 @@
-## Dewdrop
+# Dewdrop
 <p align="center">
   <img src="./src/ghouls.jpeg" alt="Ghouls">
 </p>
