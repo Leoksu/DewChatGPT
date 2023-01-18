@@ -32,14 +32,14 @@
 - [ ] Add jokes, story, weather, and some fun modules.
 - [ ] Image recognition.
 
-## Variables
+# Variables
 - `API_ID` & `API_HASH` - Get this from my.telegram.org
 - `BOT_TOKEN` - Visit [@BotFather](https://t.me/BotFather) and send `/newbot`. You will see instructions to create a new bot.
 - `API_KEY` - First you need to create [OpenAI](https://beta.openai.com) account, and click [this](https://beta.openai.com/account/api-keys) to create new api key.
 - `USERNAME` - Your bot username without @. 
 > Bcz I getting confused with Client.get_me(), so you need to put bot username manually, will very thanks if someone want to help me.
 
-## Deployment
+# Deployment
 - Run locally `VPS`:
 1. Always update before do anything
 ```sh
@@ -76,7 +76,7 @@ python3 dew.py
 - If you want to stop the bot or check logs run `screen -r dew`
 ---
 
-## Custom models
+# Custom models
 
 - Default model is `text-ada-001` which is faster and cheaper to avoid token limit.
 - See model list and more info in [OpenAi](https://beta.openai.com/docs/models/overview) site.
@@ -98,7 +98,7 @@ def generate_text(prompt):
 - That's it, keep in mind that every engine models have different cost, choose the one that suits your needs.
 ---
 
-## Custom text
+# Custom text
 
 - Set your own start text, help text, and more
 - Simply go to [this](https://github.com/Leoksu/DewChatGPT/blob/main/stuff/string.py) file and edit it to your desired text
