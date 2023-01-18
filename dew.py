@@ -15,8 +15,6 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 
-
-
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, Message
 from logging import INFO, WARNING, FileHandler, StreamHandler, basicConfig, getLogger
 from stuff.string import START_TEXT, HELP_TEXT, ABOUT_TEXT, MENU_TEXT
