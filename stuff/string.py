@@ -26,8 +26,8 @@ HELP_TEXT="""
 \u2022 `/restart` - Mods only
  """
 
-ABOUT_TEXT="-- **Informations** --\n\n**Dewdrop** | `Nameless Ghoul(Fire)`\n\n- **Dewdrop** is a `Telegram` Chat Bot with GPT-3 engine\n- Written in [Python](https://www.python.org) language with [Pyrogram](https://github.com/pyrogram/pyrogram) library, Using `[OpenAI](https://beta.openai.com) API for generating responses\n\n**This bot licensed under [GNU-GPL](https://www.gnu.org/license/) 3.0 License!**\n© **[ghost.org](t.me/TheGhostOrg)**"
+ABOUT_TEXT="-- **Informations** --\n\n**Dewdrop** | `Nameless Ghoul(Fire)`\n\n- **Dewdrop** is a `Telegram` Chat Bot with GPT-3 engine\n- Written in [Python](https://www.python.org) language with [Pyrogram](https://github.com/pyrogram/pyrogram) library, Using [OpenAI](https://beta.openai.com) API for generating responses\n\n**This bot licensed under [GNU-GPL](https://www.gnu.org/license/) 3.0 License!**\n© **[ghost.org](t.me/TheGhostOrg)**"
 
-START_TEXT="Hello **{}!**\nMy name is **Dewdrop** also known as `Nameless Ghoul(Fire)`.\nI\'m One of `The Eight Ghouls` from @TheGhostOrg.\nI\'m here for helping folks(because that\'s all I can do)\nI\'m at your service whenever you need me\n\n© **[ghost.org](t.me/TheGhostOrg)**"
+START_TEXT="Hello **{}**!\nMy name is **Dewdrop** also known as `Nameless Ghoul(Fire)`.\nI\'m One of `The Eight Ghouls` from @TheGhostOrg.\nI\'m here for helping folks(because that\'s all I can do)\nI\'m at your service whenever you need me\n\n© **[ghost.org](t.me/TheGhostOrg)**"
 
 MENU_TEXT="-- **Main Menu** --\nMy name is **Dewdrop** also known as `Nameless Ghoul(Fire)`.\nI\'m One of `The Eight Ghouls` from @TheGhostOrg.\nI\'m here for helping folks(because that\'s all I can do)\nI\'m at your service whenever you need me\n\n© **[ghost.org](t.me/TheGhostOrg)**"
