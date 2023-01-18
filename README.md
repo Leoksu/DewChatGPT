@@ -88,7 +88,7 @@ def generate_text(prompt):
         'model': 'text-ada-001', # edit this value to model you want
         'temperature': 0.5,
         'max_tokens': 1024, # you can also change max token in one msg
-        'n': 1
+        'n': 1,
         'stop': None,
         'temperature': 0.9,
         'top_p': 0.3,
