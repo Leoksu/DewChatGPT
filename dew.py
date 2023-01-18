@@ -1,4 +1,4 @@
-# DewChatGPT, telegram bot with Artificial Intelligence text based bot 
+# DewChatGPT, telegram text based bot with Artificial Intelligence
 # Copyright (C) 2023  Leoksu
 
 # This program is free software: you can redistribute it and/or modify
