@@ -1,6 +1,6 @@
 from logging import INFO, WARNING, FileHandler, StreamHandler, basicConfig, getLogger
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, Message
-from stuff.string import START_TEXT, HELP_TEXT, ABOUT_TEXT
+from stuff.string import START_TEXT, HELP_TEXT, ABOUT_TEXT, MENU_TEXT
 from pyrogram.errors import MessageNotModified
 from pyrogram import idle, Client, filters
 from asyncio import sleep
