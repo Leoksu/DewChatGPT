@@ -55,7 +55,7 @@ git clone https://github.com/Leoksu/DewChatGPT && cd DewChatGPT
 ```
 4. install all required python package
 ```sh
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 ```
 5. Copy sample.env to .env
 ```sh
