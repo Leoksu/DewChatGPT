@@ -15,6 +15,10 @@
 <a href="https://github.com/Leoksu/DewChatGPT/blob/main/LICENSE" alt="AGPLv3 license"> <img src="https://img.shields.io/badge/License-AGPL-blue.svg" /> </a>
 </p>
 
+<p align="center">
+  A simple version of <a href="https://github.com/Leoksu/Dewdrop">Dewdrop</a>, bcz I lazy to finish that
+<p/>
+
 # Features
 
 - [x] Interact to ChatGPT within telegram bot.
@@ -28,12 +32,10 @@
 - [ ] Add jokes, story, weather, and some fun modules.
 - [ ] Image recognition.
 
-
-
 ## Variables
 - `API_ID` & `API_HASH` - Get this from my.telegram.org
 - `BOT_TOKEN` - Visit [@BotFather](https://t.me/BotFather) and send `/newbot`. You will see instructions to create a new bot.
-- `API_KEY` - First you need to create beta.openai.com account, and click [this](https://beta.openai.com/account/api-keys) to create new api key.
+- `API_KEY` - First you need to create [OpenAI](https://beta.openai.com) account, and click [this](https://beta.openai.com/account/api-keys) to create new api key.
 - `USERNAME` - Your bot username without @. 
 > Bcz I getting confused with Client.get_me(), so you need to put bot username manually, will very thanks if someone want to help me.
 
