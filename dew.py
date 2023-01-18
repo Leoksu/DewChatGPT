@@ -187,7 +187,8 @@ async def cb_handler(client: ghoul, query: CallbackQuery):
         try:
             await query.edit_message_text(
                 ABOUT_TEXT,
-                reply_markup=reply_markup
+                reply_markup=reply_markup,
+                disable_web_page_preview=True
             )
         except MessageNotModified:
             pass
