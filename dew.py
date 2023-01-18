@@ -23,7 +23,6 @@ basicConfig(
     format=_LOG_FORMAT,
     level=INFO,
     datefmt="%m/%d/%Y, %H:%M:%S",
-    handlers=[FileHandler(dewlog), StreamHandler()],
 )
 
 logger.info("[---------->>> Starting your deployement <<<----------]")
@@ -63,19 +62,21 @@ async def dewgpt(client, message):
         2: "Like i told you before, I only understand word",
         3: "Please use normal word :)",
     }
+    counter = 1
     if not message.text:
-        for key in dewword:
-            await message.reply_text(dewword[key])
-            if key != len(dewword):
-                await message.reply_text(dewword[key+1])
-    chat_id = message.chat.id
-    prompt = message.text
-    await message._client.send_chat_action(chat_id, "typing")
-    await sleep(3)
-    response = generate_text(prompt)
-    r_text = response["choices"][0]["text"]
-    await message.reply(r_text)
-    await message._client.send_chat_action(chat_id, "cancel")
+        await message.reply_text(dewword[counter])
+        counter += 1
+        if counter > len(dewword):
+            counter = 1
+    else:
+        chat_id = message.chat.id
+        prompt = message.text
+        await message._client.send_chat_action(chat_id, "typing")
+        await sleep(3)
+        response = generate_text(prompt)
+        r_text = response["choices"][0]["text"]
+        await message.reply(r_text)
+        await message._client.send_chat_action(chat_id, "cancel")
 
 logger.info("Successfully loaded GPT modules")
 
