@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  <b> Telegram chat bot with OpenAI API using GPT-3 engine based on pyorgram</b>
+  <b> Telegram chat bot with OpenAI API using GPT-3 engine based on pyrogram</b>
 </p>
 
 <p align="center">
