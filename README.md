@@ -18,7 +18,7 @@
 # Features
 
 - [x] Interact to ChatGPT within telegram bot.
-- [x] Support custom engine model, see [model list](https://beta.openai.com/docs/models/gpt-3).
+- [x] Support [custom engine model](#custom-models), see [model list](https://beta.openai.com/docs/models/gpt-3).
 - [x] Set custom start, help, info text.
 - [x] Easy deployable
 
@@ -28,8 +28,14 @@
 - [ ] Add jokes, story, weather, and some fun modules.
 - [ ] Image recognition.
 
+
+
 ## Variables
-- `API_ID
+- `API_ID` & `API_HASH` - Get this from my.telegram.org
+- `BOT_TOKEN` - Visit [@BotFather](https://t.me/BotFather) and send `/newbot`. You will see instructions to create a new bot.
+- `API_KEY` - First you need to create beta.openai.com account, and click [this](https://beta.openai.com/account/api-keys) to create new api key.
+- `USERNAME` - Your bot username without @. 
+> Bcz I getting confused with Client.get_me(), so you need to put bot username manually, will very thanks if someone want to help me.
 
 ## Deployment
 - Run locally `VPS`:
@@ -68,7 +74,7 @@ python3 dew.py
 - If you want to stop the bot or check logs run `screen -r dew`
 ---
 
-## Custom model
+## Custom models
 
 - Default model is `text-ada-001` which is faster and cheaper to avoid token limit.
 - See model list and more info in [OpenAi](https://beta.openai.com/docs/models/overview) site.
@@ -87,7 +93,7 @@ def generate_text(prompt):
         'frequency_penalty': 0.5,
     }
 ```
-- That's it, keep in mind that every engine model have different cost, choose the one that suits your needs
+- That's it, keep in mind that every engine models have different cost, choose the one that suits your needs.
 ---
 
 ## Custom text
