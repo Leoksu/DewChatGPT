@@ -173,6 +173,31 @@ async def start(client, message):
           reply_markup=pm_markup
       )
 
+@ghoul.on_message(filters.command(["help", "help@{USERNAME}"]))
+async def help(client, message):
+    buttons = [
+        [
+            InlineKeyboardButton("🔙 BACK", callback_data="menu"),
+            InlineKeyboardButton ("SUPPORT 💬", url=f"https://t.me/TheGhostSupport"),
+        ]
+        ]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    if message.chat.type == 'private':
+        await message.reply_text(
+            HELP_TEXT,
+            reply_markup=reply_markup
+        )
+    else:
+        pm_but = [InlineKeyboardButton("PM Dew's", url="https://t.me/{USERNAME}?start")]
+        pm_msg = "Hello! PM me if you have any questions on how to use me!"
+        pm_markup = InlineKeyboardMarkup(pm_but)
+        await message.reply_text(
+            pm_msg,
+            reply_markup=pm_markup
+        )
+
+logger.info("Successfully loaded help modules")
+
 @ghoul.on_callback_query()
 async def cb_handler(client: ghoul, query: CallbackQuery):
     if query.data=="help":
@@ -243,30 +268,6 @@ async def cb_handler(client: ghoul, query: CallbackQuery):
 
 logger.info("Successfully loaded start modules")
 
-@ghoul.on_message(filters.command(["help", "help@{USERNAME}"]))
-async def help(client, message):
-    buttons = [
-        [
-            InlineKeyboardButton("🔙 BACK", callback_data="start"),
-            InlineKeyboardButton ("SUPPORT 💬", url=f"https://t.me/TheGhostSupport"),
-        ]
-        ]
-    reply_markup = InlineKeyboardMarkup(buttons)
-    if message.chat.type == 'private':
-        await message.reply_text(
-            HELP_TEXT,
-            reply_markup=reply_markup
-        )
-    else:
-        pm_but = [InlineKeyboardButton("PM Dew's", url="https://t.me/{USERNAME}?start")]
-        pm_msg = "Hello! PM me if you have any questions on how to use me!"
-        pm_markup = InlineKeyboardMarkup(pm_but)
-        await message.reply_text(
-            pm_msg,
-            reply_markup=pm_markup
-        )
-
-logger.info("Successfully loaded help modules")
 
 ### https://github.com/dashezup/tgbot/blob/dev/plugins/ping.py ###
 import asyncio
