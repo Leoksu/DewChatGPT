@@ -165,15 +165,15 @@ async def start(client, message):
           reply_markup=start_markup
        )
    else:
-      pm_but = [InlineKeyboardButton("PM Dew's", url="https://t.me/{USERNAME}?start")]
-      pm_msg = "Hello {mention}! PM me if you have any questions on how to use me!"
+      pm_but = [InlineKeyboardButton("PM Dew's", url=f"https://t.me/{USERNAME}?start")]
+      pm_msg = f"Hello {mention}! PM me if you have any questions on how to use me!"
       pm_markup = InlineKeyboardMarkup(pm_but)
       await message.reply_text(
           pm_msg,
           reply_markup=pm_markup
       )
 
-@ghoul.on_message(filters.command(["help", "help@{USERNAME}"]))
+@ghoul.on_message(filters.command(["help", f"help@{USERNAME}"]))
 async def help(client, message):
     buttons = [
         [
@@ -188,8 +188,8 @@ async def help(client, message):
             reply_markup=reply_markup
         )
     else:
-        pm_but = [InlineKeyboardButton("PM Dew's", url="https://t.me/{USERNAME}?start")]
-        pm_msg = "Hello! PM me if you have any questions on how to use me!"
+        pm_but = [InlineKeyboardButton("PM Dew's", url=f"https://t.me/{USERNAME}?start")]
+        pm_msg = f"Hello! PM me if you have any questions on how to use me!"
         pm_markup = InlineKeyboardMarkup(pm_but)
         await message.reply_text(
             pm_msg,
