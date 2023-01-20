@@ -343,6 +343,5 @@ async def main():
 
 loop = asyncio.get_event_loop()
 
-if __name__ == "__main__":
-    loop.run_until_complete(main())
-    logger.info(" --- Dew's has been stopped ---")
+loop.run_until_complete(main())
+logger.info(" --- Dew's has been stopped ---")
