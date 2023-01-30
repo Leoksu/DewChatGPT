@@ -29,6 +29,9 @@ import sys
 import os
 import re
 
+#TODO
+# make code more clean and readable (not sure i will do it)
+
 logger = getLogger("DewLogs")
 
 dewlog = f"dews{sys.argv[6]}.log" if len(sys.argv) > 6 else "dews.log"
@@ -130,7 +133,7 @@ async def chat(_, message):
             message.text.strip(),
             flags=re.IGNORECASE,
         )
-        if not match and not match2:
+        if not match or not match2:
             return
     await ghoul.send_chat_action(chat_id, "typing")
     await sleep(1)
@@ -146,7 +149,7 @@ async def start(client, message):
                 InlineKeyboardButton("❔ HOW TO USE ME ❔", callback_data="help"),
             ],
             [
-                InlineKeyboardButton("📢 CHANNEL", url=f"https://t.me/TheGhostOrg"),
+                InlineKeyboardButton("📢 CHANNEL", url=f"https://t.me/GhostWebs"),
                 InlineKeyboardButton("SOURCE 📦", url=f"https://github.com/Leoksu/DewChatGPT"),
             ],
             [
@@ -178,7 +181,7 @@ async def help(client, message):
     buttons = [
         [
             InlineKeyboardButton("🔙 BACK", callback_data="menu"),
-            InlineKeyboardButton ("SUPPORT 💬", url=f"https://t.me/TheGhostSupport"),
+            InlineKeyboardButton ("SUPPORT 💬", url=f"https://t.me/GhostWebsChat"),
         ]
         ]
     reply_markup = InlineKeyboardMarkup(buttons)
@@ -204,7 +207,7 @@ async def cb_handler(client: ghoul, query: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton("🔙 BACK", callback_data="menu"),
-                InlineKeyboardButton ("SUPPORT 💬", url=f"https://t.me/TheGhostSupport"),
+                InlineKeyboardButton ("SUPPORT 💬", url=f"https://t.me/GhostWebsChat"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -220,7 +223,7 @@ async def cb_handler(client: ghoul, query: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton("🔙 BACK", callback_data="menu"),
-                InlineKeyboardButton ("SUPPORT 💬", url=f"https://t.me/TheGhostSupport"),
+                InlineKeyboardButton ("SUPPORT 💬", url=f"https://t.me/GhostWebsChat"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -239,7 +242,7 @@ async def cb_handler(client: ghoul, query: CallbackQuery):
                 InlineKeyboardButton("❔ HOW TO USE ME ❔", callback_data="help"),
             ],
             [
-                InlineKeyboardButton("📢 CHANNEL", url=f"https://t.me/TheGhostOrg"),
+                InlineKeyboardButton("📢 CHANNEL", url=f"https://t.me/GhostWebs"),
                 InlineKeyboardButton("SOURCE 📦", url=f"https://github.com/Leoksu/DewChatGPT"),
             ],
             [
