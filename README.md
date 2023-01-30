@@ -1,4 +1,4 @@
-# Dewdrop
+## Dewdrop
 <p align="center">
   <img src="./src/ghouls.jpeg" alt="Ghouls">
 </p>
@@ -18,6 +18,10 @@
 <p align="center">
   A simple version of <a href="https://github.com/Leoksu/Dewdrop">Dewdrop</a>, bcz I lazy to finish that
 <p/>
+
+# Demo
+- You can try this bot for better understanding the function of this bot
+- <a href="https://t.me/DewdropRbot" alt="Dewdrop"> <img src="https://img.shields.io/badge/t.me/%20-Dewdrop-blue.svg" /> </a>
 
 # Features
 
